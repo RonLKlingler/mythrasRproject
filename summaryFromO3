@@ -1,0 +1,201 @@
+1. Core Resolution Mechanic
+
+Roll‑under d100: A test succeeds if the roll is ≤ the relevant skill. Results of 01‑05 always succeed; 96‑00 always failfileciteturn1file12.
+
+Criticals & Fumbles: Critical success = roll ≤ 1/10 of modified skill (round up). Fumble depends on circumstance but 96‑00 is an automatic fumblefileciteturn1file12.
+
+Difficulty Grades adjust effective skill (Very Easy ×2, Easy ×1.5, Hard ×⅔, Formidable ×½, Herculean ×⅒) or waive/forbid the rollfileciteturn1file12.
+
+2. Character Data Model
+
+2.1 Characteristics
+
+STR, CON, SIZ, DEX, INT, POW, CHA – normally 3‑18 for humans (3d6 except INT & SIZ 2d6+6)fileciteturn1file3.
+
+2.2 Derived Attributes
+
+Attribute
+
+Formula
+
+Notes
+
+Action Points
+
+lookup on (INT+DEX): 1 (≤12), 2 (13‑24), 3 (25‑36), +1 per +12fileciteturn1file0
+
+# acts/round
+
+Damage Modifier
+
+lookup on (STR+SIZ) table (‑1d8 … +2d10+1d4)fileciteturn1file0
+
+added to weapon dmg
+
+Experience Mod
+
+based on CHA: ‑1 (≤6), 0 (7‑12), +1 (13‑18), +1 per +6fileciteturn1file0
+
+Healing Rate
+
+from CON: 1 (≤6), 2 (7‑12), 3 (13‑18), +1 per +6fileciteturn1file0
+
+Hit Points/Location
+
+see HP table keyed on (CON+SIZ)fileciteturn1file6
+
+Initiative Bonus
+
+(DEX+INT)/2 (round down)fileciteturn1file6
+
+Luck Points
+
+by POW: 1 (≤6), 2 (7‑12), 3 (13‑18), +1 per +6fileciteturn1file6
+
+Magic Points
+
+equal to POWfileciteturn1file6
+
+Movement
+
+species default; humans 6 m/roundfileciteturn1file6
+
+2.3 Skills
+
+Standard Skills (always present – base % = characteristic formula)fileciteturn1file7
+
+Professional Skills – added via culture/career; start at 0 + bonuses.
+
+Combat Styles – treated as Standard Skills; base % = STR+DEX; each represents a group of weapons + optional traitfileciteturn1file18.
+
+For implementation: store each skill with fields {name, category, base_formula, advances}; calculate “modified %” at runtime.
+
+3. Character Creation Workflow (default)
+
+Roll/allocate Characteristics (3d6 & 2d6+6 or 75‑point buy)fileciteturn1file1.
+
+Compute Attributes (§2.2).
+
+Select Culture (Barbarian, Civilised, Nomadic, Primitive). Add +40% to Customs & Native Tongue; pick 3 Professional Skills, 0‑1 Combat Style, distribute 100 cultural points across listed Standard/Professional/Style (min 5, max 15 each)fileciteturn1file19.
+
+Roll Background Event & Social Class (optional)fileciteturn1file2.
+
+Choose Career (e.g., Warrior, Merchant, Sorcerer…) and allocate 100 career points as abovefileciteturn1file2.
+
+Bonus Skill Points: default 150 (adult), max 15 per skill; may add one hobby Professional/Stylefileciteturn1file5.
+
+Equipment & Money from culture + class; buy extras (Economics chapter).
+
+Final touches: connections, Passions, cult membership, name.
+
+4. Skill Tests & Opposed Rolls
+
+Standard Test: roll d100 vs skill after modifiers.
+
+Opposed Test: higher level of success wins (critical > success > failure > fumble).
+
+Store utility to grade results programmatically for the app.
+
+5. Combat Module
+
+Time: 5‑second combat rounds; each participant spends Action Points in sequence.
+
+Initiative: 1d10 + Initiative Bonus; reorder each cycle.
+
+Special Effects: attacker who wins an opposed roll by a superior success level selects 1 or more effects.
+
+Hit Locations: weapons damage location rolled on d20; apply armour & Damage Mod; reduce HP; check serious/major wounds.
+
+Implement tables: hit‑location ranges, armour values, wound thresholds.
+
+6. Magic Module (high‑level)
+
+Mythras offers five disciplines:
+
+Discipline
+
+Key Skill
+
+Resource
+
+Notes
+
+Folk Magic
+
+Folk Magic
+
+Magic Points
+
+small utility spells
+
+Animism
+
+Trance / Binding
+
+bound spirits
+
+negotiate, combat spirits
+
+Mysticism
+
+Mysticism talents
+
+none
+
+self‑buff talents
+
+Sorcery
+
+Invocation & Shaping
+
+Magic Points
+
+combine spell + magnitude/intensity
+
+Theism
+
+Devotion & Exhort
+
+Magic Points
+
+divine miracles
+
+Provide flexible schema so additional traditions can be added; each spell/miracle entry: {name, discipline, cost, range, duration, effect}.
+
+7. Passions & Luck
+
+Optional but recommended. Passions act as percentile traits (). Luck Points (see §2.2) may be spent to reroll, change damage, or seize initiativefileciteturn1file6.
+
+8. Cults & Brotherhoods
+
+Cults grant ranks, miracle access, social benefits/restrictions. Store {name, type, ranks[], miracles_by_rank[]} for quick lookup.
+
+9. Creatures & NPCs
+
+Use the Statistics Block⎯fields:
+name, description, characteristics, attributes, hit_locations, armour, abilities[], magic, skills{}, combat_styles{}, weapons{}, notes, PC_optionsfileciteturn1file15.
+
+10. Constants & Tables
+
+Embed or reference the following for app use:
+
+Damage Modifier table (STR+SIZ)fileciteturn1file0
+
+Hit Points per Location table (CON+SIZ)fileciteturn1file6
+
+Height/Weight table (SIZ) – if tracking physical build.
+
+Skill Difficulty Grade tablefileciteturn1file12
+
+Action Points thresholdsfileciteturn1file0
+
+Implementation Tips
+
+Treat every numeric field as integer or signed dice notation ("+1d4").
+
+Support modifiers pipeline: base → advances → situational → magic.
+
+Keep rule text behind an SRD/Gateway licence; expose mechanics, not proprietary prose.
+
+End of summary document — ready for iterative refinement / export to JSON schema or database design.
+

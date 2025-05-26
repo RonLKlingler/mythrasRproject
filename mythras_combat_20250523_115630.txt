@@ -1,0 +1,102 @@
+=== MYTHRAS COMBAT LOG ===
+
+[R1] === Declaration Phase ===
+[R1] > FighterB3unleashes a ferocious flurry of longsword strikes, seeking to overwhelm and terrify their opponent.
+[R1] > FighterA1 deftly parries the enemy's blows, shielding their allies with their longsword's swift, precise strikes.
+[R1] > FighterA2, the hit-and-run specialist, darts in with a flurry of shortsword strikes, then nimbly retreats, evading retaliation.
+[R1] > FighterB4, the cautious combatant, grips their staff tightly, patiently awaiting an opening to strike with precision.
+[R1] 
+=== Action Phase ===
+[R1] FighterA1 is bashed off-balance, losing 1 AP!
+[R1] FighterB3 attacks FighterA1! [Success 13/44] vs [Combat Style 29/44]
+[R1]   >> Hit! 8.0 damage dealt!
+[R1]   >> Effects: Bash
+[R1] FighterA2 attacks FighterB3! [Failure 70/44] vs [Combat Style 74/44]
+[R1]   >> Both miss!
+[R1] FighterA1 suffers a bleeding wound!
+[R1] FighterB4 attacks FighterA1! [Success 31/41] vs [Combat Style 100/0]
+[R1]   >> Hit! 7.0 damage dealt!
+[R1]   >> Effects: Bleed
+[R1]   *** FighterA1 is defeated! ***
+[R1] 
+-- Cycle 2 --
+[R1] FighterB3 attacks FighterA2! [Failure 45/44] vs [Combat Style 74/44]
+[R1]   >> Both miss!
+[R1] FighterB3 is bashed off-balance, losing 1 AP!
+[R1] FighterA2 attacks FighterB3! [Success 12/44] vs [Combat Style 100/0]
+[R1]   >> Hit! 5.0 damage dealt!
+[R1]   >> Effects: Bash
+[R1] FighterA2 withdraws from combat!
+[R1] FighterB4 attacks FighterA2! [Success 40/41] vs [Combat Style 21/44]
+[R1]   >> Defended successfully!
+[R1]   >> Effects: Withdraw
+[R1] 
+-- Cycle 3 --
+[R1] FighterB4 attacks FighterA2! [Failure 95/41] vs [Combat Style 100/0]
+[R1]   >> Both miss!
+[R1] 
+=== End of Round ===
+[R1] FighterA1 takes 2 bleeding damage!
+[R2] === Declaration Phase ===
+[R2] > FighterB3roars and swings their longsword in a vicious, bone-shattering arc, aiming to terrify their opponent.
+[R2] > FighterA2darts in, lands a quick strike with their shortsword, then nimbly retreats, keeping their opponent off-balance.
+[R2] > FighterB4, the cautious combatant, carefully observes the battlefield, waiting for the perfect moment to strike with their staff.
+[R2] 
+=== Action Phase ===
+[R2] FighterA2 is bashed off-balance, losing 1 AP!
+[R2] FighterB3 attacks FighterA2! [Success 28/44] vs [Combat Style 55/44]
+[R2]   >> Hit! 3.0 damage dealt!
+[R2]   >> Effects: Bash
+[R2] FighterB3 regains their footing!
+[R2] FighterA2 attacks FighterB3! [Failure 76/44] vs [Combat Style 23/44]
+[R2]   >> Defended successfully!
+[R2]   >> Effects: Arise
+[R2] FighterA2 withdraws from combat!
+[R2] FighterB4 attacks FighterA2! [Failure 86/41] vs [Combat Style 14/44]
+[R2]   >> Defended successfully!
+[R2]   >> Effects: Withdraw
+[R2] 
+-- Cycle 2 --
+[R2] FighterB4 attacks FighterA2! [Failure 81/41] vs [Combat Style 100/0]
+[R2]   >> Both miss!
+[R2] 
+-- Cycle 3 --
+[R2] FighterB4 attacks FighterA2! [Failure 87/41] vs [Combat Style 100/0]
+[R2]   >> Both miss!
+[R2] 
+=== End of Round ===
+[R2] FighterA1 takes 1 bleeding damage!
+[R3] === Declaration Phase ===
+[R3] > FighterB3, the brutal warrior, swings their longsword with a fierce roar, aiming to overwhelm and intimidate their opponent.
+[R3] > FighterA2darts in, lands a quick strike with their shortsword, then nimbly retreats, anticipating the enemy's counterattack.
+[R3] > FighterB4, the cautious combatant, grips their staff and waits patiently, poised to strike at the first sign of an opening.
+[R3] 
+=== Action Phase ===
+[R3] FighterA2 withdraws from combat!
+[R3] FighterB3 attacks FighterA2! [Success 34/44] vs [Combat Style 16/44]
+[R3]   >> Defended successfully!
+[R3]   >> Effects: Withdraw
+[R3] FighterB3 regains their footing!
+[R3] FighterB3 regains their footing!
+[R3] FighterA2 attacks FighterB3! [Success 20/44] vs [Combat Style 6/44]
+[R3]   >> Defended successfully!
+[R3]   >> Effects: Arise, Arise
+[R3] FighterA2 is disarmed!
+[R3] FighterB4 attacks FighterA2! [Success 11/41] vs [Combat Style 85/44]
+[R3]   >> Hit! 2.0 damage dealt!
+[R3]   >> Effects: Disarm Opponent
+[R3] 
+-- Cycle 2 --
+[R3] FighterB3 is knocked prone!
+[R3] FighterA2 attacks FighterB3! [Success 12/44] vs [Combat Style 100/0]
+[R3]   >> Hit! 5.0 damage dealt!
+[R3]   >> Effects: Trip Opponent
+[R3] FighterB4 attacks FighterA2! [Failure 42/41] vs [Combat Style 100/0]
+[R3]   >> Both miss!
+[R3] 
+-- Cycle 3 --
+[R3] FighterB4 attacks FighterA2! [Failure 84/41] vs [Combat Style 100/0]
+[R3]   >> Both miss!
+[R3] 
+=== End of Round ===
+[R3] FighterA1 takes 1 bleeding damage!
